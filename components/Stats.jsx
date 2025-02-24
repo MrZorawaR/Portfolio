@@ -21,7 +21,7 @@ const stats = [
 ];
 const Stats = () => {
   return (
-    <div>
+    <div className="pt-4 pb-12 xl:pt-0 xl:pb-0">
       <div className="container mx-auto">
         <div
          className="flex flex-wrap gap-6 max-w-[86vw] mx-auto xl:max-w-none"
