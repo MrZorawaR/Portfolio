@@ -10,7 +10,7 @@ const about = {
   info: [
     {
       fieldName: "Name",
-      fieldValue: "John Doe",
+      fieldValue: "Zorawar Singh",
     },
     {
       fieldName: "Phone",
