@@ -27,7 +27,7 @@ const info = [
   {
     icon: <FaMapMarkedAlt />,
     title: "Address",
-    description: "Jaipur, Rajasthan, India",
+    description: "Shamli,Uttar Pradesh, India",
   },
 ];
 const Contact = () => {

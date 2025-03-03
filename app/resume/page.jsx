@@ -151,10 +151,10 @@ const Resume = () => {
           className="flex flex-col xl:flex-row gap-[60px]"
         >
           <TabsList className="flex flex-col gap-6 max-w-[380px] w-full mx-auto xl:mx-0">
-            <TabsTrigger value="experience">Experience</TabsTrigger>
-            <TabsTrigger value="education">Education</TabsTrigger>
-            <TabsTrigger value="skills">Skills</TabsTrigger>
-            <TabsTrigger value="about">About me</TabsTrigger>
+            <TabsTrigger value="experience" className="rounded-xl">Experience</TabsTrigger>
+            <TabsTrigger value="education" className="rounded-xl">Education</TabsTrigger>
+            <TabsTrigger value="skills" className="rounded-xl">Skills</TabsTrigger>
+            <TabsTrigger value="about" className="rounded-xl">About me</TabsTrigger>
           </TabsList>
           <div className="min-h-[70vh] w-full">
             <TabsContent value="experience" className="w-full">
