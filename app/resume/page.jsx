@@ -1,7 +1,20 @@
 "use client";
 import { FaHtml5, FaCss3, FaJs, FaReact, FaNodeJs } from "react-icons/fa";
 
-import { SiTailwindcss, SiNextdotjs } from "react-icons/si";
+import {
+  SiTailwindcss,
+  SiNextdotjs,
+  SiExpress,
+  SiTypescript,
+  SiMongodb,
+  SiNpm,
+  SiGit,
+  SiVercel,
+  SiFigma,
+  SiCanva,
+  SiBootstrap,
+} from "react-icons/si";
+import { TbBrandCpp } from "react-icons/tb";
 
 const about = {
   title: "About Me",
@@ -18,7 +31,7 @@ const about = {
     },
     {
       fieldName: "Experience",
-      fieldValue: "1+ Year",
+      fieldValue: "2+ Year",
     },
     {
       fieldName: "Email",
@@ -64,6 +77,50 @@ const experience = {
   ],
 };
 
+const achievements = {
+  title: "Achievements",
+  description:
+    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, perferendis?",
+  items: [
+    {
+      title: "2nd Runner Up in Code-A-Haunt 2.0 Hackathon",
+      location: "LPU, Phagwara, Punjab",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, perferendis?",
+      link: "https://www.linkedin.com/posts/nitish315_hackathon-codeahaunt-lpu-activity-7302348539353780224-IHHm/",
+    },
+    {
+      title:
+        "Finalists in AIU-North Zone Student Research Convention – Anveshan 2024",
+      location: " Galgotias University, Greater Noida, Uttar Pradesh",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, perferendis?",
+      link: "https://www.linkedin.com/posts/nitish315_anveshan2024-aiu-krishidoot-activity-7270691542292393984-7MJl/",
+    },
+    {
+      title: "Participant in Smart India Hackathon(SIH) 2024",
+      location: "Geeta University, Panipat, Haryana",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, perferendis?",
+      link: "https://www.linkedin.com/posts/nitish315_sih2024-hackathon-fasalguru-activity-7246082531937136640-kuoS/",
+    },
+    {
+      title: "Participant in HackaHound 2.0",
+      location: "SRM University, Modinagar, Ghaziabad, Uttar Pradesh",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, perferendis?",
+      link: "https://www.linkedin.com/posts/nitish315_teamworkmakesthedreamwork-grateful-collaboration-activity-7184176607509536768-bA2G/",
+    },
+    {
+      title: "Participant in Hack-Wars Hackathon",
+      location: "Chandigarh University, Ajitgarh, Punjab",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, perferendis?",
+      link: "https://www.linkedin.com/posts/nitish315_hackathon-leadership-innovation-activity-7247636943612583937-lKsU/",
+    },
+  ],
+};
+
 const education = {
   icon: "/assets/resume/cap.svg",
   title: "Education",
@@ -77,12 +134,12 @@ const education = {
     },
     {
       institution: "CBSE",
-      degree: "12th",
+      degree: "12th - Non-Medical(PCM)",
       duration: "2021 - 2022",
     },
     {
       institution: "CBSE",
-      degree: "10th",
+      degree: "10th - (94%)",
       duration: "2019 - 2020",
     },
   ],
@@ -121,6 +178,46 @@ const skills = {
       icon: <SiNextdotjs />,
       name: "Next.js",
     },
+    {
+      icon: <SiExpress />,
+      name: "Express.js",
+    },
+    {
+      icon: <SiTypescript />,
+      name: "Typescript",
+    },
+    {
+      icon: <SiMongodb />,
+      name: "MongoDB",
+    },
+    {
+      icon: <SiCanva />,
+      name: "Canva",
+    },
+    {
+      icon: <SiGit />,
+      name: "Git",
+    },
+    {
+      icon: <TbBrandCpp />,
+      name: "C++",
+    },
+    {
+      icon: <SiNpm />,
+      name: "Node Package Manager(NPM)",
+    },
+    {
+      icon: <SiVercel />,
+      name: "Vercel Deployment",
+    },
+    {
+      icon: <SiFigma />,
+      name: "Figma",
+    },
+    {
+      icon: <SiBootstrap />,
+      name: "Bootstrap",
+    },
   ],
 };
 
@@ -151,10 +248,21 @@ const Resume = () => {
           className="flex flex-col xl:flex-row gap-[60px]"
         >
           <TabsList className="flex flex-col gap-6 max-w-[380px] w-full mx-auto xl:mx-0">
-            <TabsTrigger value="experience" className="rounded-xl">Experience</TabsTrigger>
-            <TabsTrigger value="education" className="rounded-xl">Education</TabsTrigger>
-            <TabsTrigger value="skills" className="rounded-xl">Skills</TabsTrigger>
-            <TabsTrigger value="about" className="rounded-xl">About me</TabsTrigger>
+            <TabsTrigger value="experience" className="rounded-xl">
+              Experience
+            </TabsTrigger>
+            <TabsTrigger value="education" className="rounded-xl">
+              Education
+            </TabsTrigger>
+            <TabsTrigger value="skills" className="rounded-xl">
+              Skills
+            </TabsTrigger>
+            <TabsTrigger value="about" className="rounded-xl">
+              About me
+            </TabsTrigger>
+            <TabsTrigger value="achievements" className="rounded-xl">
+              Achievements
+            </TabsTrigger>
           </TabsList>
           <div className="min-h-[70vh] w-full">
             <TabsContent value="experience" className="w-full">
@@ -163,7 +271,7 @@ const Resume = () => {
                 <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
                   {experience.description}
                 </p>
-                <ScrollArea className="h-[400px]">
+                <ScrollArea className="lg:h-[26rem] h-[35rem]">
                   <ul className="grid grid-cols-1 gap-[30px] lg:grid-cols-2">
                     {experience.items.map((item, index) => {
                       return (
@@ -192,7 +300,7 @@ const Resume = () => {
                 <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
                   {education.description}
                 </p>
-                <ScrollArea className="h-[400px]">
+                <ScrollArea className="lg:h-[26rem] h-[35rem]">
                   <ul className="grid grid-cols-1 gap-[30px] lg:grid-cols-2">
                     {education.items.map((item, index) => {
                       return (
@@ -218,42 +326,44 @@ const Resume = () => {
             <TabsContent value="skills" className="w-full h-full">
               <div className="flex flex-col gap-[30px]">
                 <div className="flex flex-col gap-[30px] text-center xl:text-left">
-                  "<h3 className="text-4xl font-bold">{skills.title}</h3>
+                  <h3 className="text-4xl font-bold">{skills.title}</h3>
                   <p className="max-w-[600px] text-white/60 mx-auto xl:mx-8">
                     {skills.description}
                   </p>
                 </div>
-                <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
-                  {skills.skillSets.map((skill, index) => {
-                    return (
-                      <li key={index}>
-                        <TooltipProvider delayDuration={100}>
-                          <Tooltip>
-                            <TooltipTrigger className="w-full h-[150px] bg-[#232329] rounded-xl flex items-center justify-center group">
-                              <div className="text-6xl group-hover:text-accent transition-all duration-300">
-                                {skill.icon}
-                              </div>
-                            </TooltipTrigger>
-                            <TooltipContent>
-                              <p className="capitalize">{skill.name}</p>
-                            </TooltipContent>
-                          </Tooltip>
-                        </TooltipProvider>
-                      </li>
-                    );
-                  })}
-                </ul>
+                <ScrollArea className="lg:h-[26rem] h-[35rem]">
+                  <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+                    {skills.skillSets.map((skill, index) => {
+                      return (
+                        <li key={index}>
+                          <TooltipProvider delayDuration={100}>
+                            <Tooltip>
+                              <TooltipTrigger className="w-full h-[150px] bg-[#232329] rounded-xl flex items-center justify-center group">
+                                <div className="text-6xl group-hover:text-accent transition-all duration-300">
+                                  {skill.icon}
+                                </div>
+                              </TooltipTrigger>
+                              <TooltipContent>
+                                <p className="capitalize">{skill.name}</p>
+                              </TooltipContent>
+                            </Tooltip>
+                          </TooltipProvider>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </ScrollArea>
               </div>
             </TabsContent>
-            <TabsContent
-              value="about"
-              className="w-full text-center xl:text-left"
-            >
+            <TabsContent value="about" className="w-full h-full">
               <div className="flex flex-col gap-[30px]">
-                <h3 className="text-4xl font-bold">{about.title}</h3>
-                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
-                  {about.description}
-                </p>
+              <div className="flex flex-col gap-[30px] text-center xl:text-left">
+                  <h3 className="text-4xl font-bold">{about.title}</h3>
+                  <p className="max-w-[600px] text-white/60 mx-auto xl:mx-8">
+                    {about.description}
+                  </p>
+                </div>
+                <ScrollArea className="lg:h-[26rem] h-[35rem]">
                 <ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-6 max-w-[620px] mx-auto xl:mx-0">
                   {about.info.map((item, index) => (
                     <li
@@ -265,6 +375,47 @@ const Resume = () => {
                     </li>
                   ))}
                 </ul>
+                </ScrollArea>
+              </div>
+            </TabsContent>
+
+            <TabsContent value="achievements" className="w-full">
+              <div className="flex flex-col gap-[30px]">
+              <div className="flex flex-col gap-[30px] text-center xl:text-left">
+                  <h3 className="text-4xl font-bold">{achievements.title}</h3>
+                  <p className="max-w-[600px] text-white/60 mx-auto xl:mx-8">
+                    {achievements.description}
+                  </p>
+                </div>
+                <ScrollArea className="lg:h-[26rem] h-[35rem]">
+                  <ul className="grid grid-cols-1 gap-[30px]">
+                    {achievements.items.map((item, index) => (
+                      <li
+                        key={index}
+                        className="bg-[#232329] h-[17rem] lg:h-[12rem] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-2"
+                      >
+                        <h3 className="lg:text-xl font-semibold text-center lg:text-left">
+                          {item.title}
+                        </h3>
+                        <div className="flex items-center gap-3">
+                          <span className="w-[6px] h-[6px] bg-accent rounded-full"></span>
+                          <p className="text-white/60">{item.location}</p>
+                        </div>
+                        <p className="text-white/60 text-sm text-center lg:text-left">
+                          {item.description}
+                        </p>
+                        <a
+                          href={item.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-accent text-sm mt-2 hover:underline"
+                        >
+                          Check out the achievement
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </ScrollArea>
               </div>
             </TabsContent>
           </div>

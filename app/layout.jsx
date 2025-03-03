@@ -10,7 +10,7 @@ const JetBrainsMono = JetBrains_Mono({
   weight:['100','200','300','400','500','600','700','800']
 })
 export const metadata = {
-  title: "Portfolio",
+  title: "ZorawaR SingH",
   description: "Portfolio of ZorawaR SingH",
 };
 

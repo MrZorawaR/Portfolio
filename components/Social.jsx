@@ -1,5 +1,7 @@
 import Link from 'next/link'
 import {FaGithub,FaLinkedinIn} from 'react-icons/fa'
+import { SiLeetcode } from "react-icons/si";
+
 
 const socials = [
     {
@@ -9,8 +11,11 @@ const socials = [
     {
         icon:<FaLinkedinIn/>,
         path:"https://www.linkedin.com/in/nitish315/"
-
     },
+    {
+      icon:<SiLeetcode/>,
+      path:"https://leetcode.com/u/nitish315/"
+  },
 ]
 const Social = () => {
   return (
