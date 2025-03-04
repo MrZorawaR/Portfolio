@@ -20,13 +20,13 @@ const projects = [
   {
     num: "01",
     category: "frontend",
-    title: "project 1",
+    title: "Prime Tv",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae cupiditate exercitationem asperiores aliquam. Possimus, quas.",
-    stack: [{ name: "react" }, { name: "next" }, { name: "tailwind" }],
-    image: "/assets/work/thumb1.png",
-    live: "",
-    github: "",
+      "Prime Tv is a movie streaming web app built with React.js and Rest API, offering curated content, personalized recommendations, and seamless, secure streaming. This project enhanced my skills in creating high-performance, user-friendly platforms optimized for all devices.",
+    stack: [{ name: "React.Js" }, { name: "Rest API" }, { name: "Tailwind CSS" },{ name: "Redux Toolkit" },{ name: "javascript" }],
+    image: "/assets/work/prime-tv.png",
+    live: "https://prime-tv-two.vercel.app/",
+    github: "https://github.com/sahilmor/Prime.tv",
   },
   {
     num: "02",
@@ -100,7 +100,7 @@ const Work = () => {
               <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500 capitalize">
                 {project.category} project
               </h2>
-              <p className="text-white/60">{project.description}</p>
+              <p className="text-white/60 text-justify">{project.description}</p>
               <ul className="flex gap-4">
                 {project.stack.map((stack, index) => (
                   <li className="text-xl text-accent" key={index}>
@@ -111,7 +111,7 @@ const Work = () => {
               </ul>
               <div className="border border-white"></div>
               <div className="flex gap-4 mt-4 items-center">
-                <Link href={project.live}>
+                <Link href={project.live} target="_blank">
                   <TooltipProvider delayDuration={100}>
                     <Tooltip>
                       <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 group flex items-center justify-center">
@@ -121,7 +121,7 @@ const Work = () => {
                     </Tooltip>
                   </TooltipProvider>
                 </Link>
-                <Link href={project.github}>
+                <Link href={project.github} target="_blank">
                   <TooltipProvider delayDuration={100}>
                     <Tooltip>
                       <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 group flex items-center justify-center">
@@ -151,14 +151,14 @@ const Work = () => {
                 <SwiperSlide key={index} className="w-full">
                   <div className="xl:h-[460px] h-[200px] relative group flex justify-center items-center bg-pink-50/20 rounded-xl">
                     {/* Overlay */}
-                    <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-all"></div>
+                    <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-all rounded-xl"></div>
 
                     {/* Image */}
-                    <div className="relative w-full h-full">
+                    <div className="relative w-full h-full rounded-xl">
                       <Image
                         src={project.image}
                         fill
-                        className="object-cover rounded-xl"
+                        className="object-center rounded-xl"
                         alt="Project Image"
                       />
                     </div>
