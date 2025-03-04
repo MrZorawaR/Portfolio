@@ -10,7 +10,7 @@ export default function Home() {
         <div className="flex flex-col items-center justify-between h-full xl:flex-row ml:pt-8 xl:pb-24">
           <div className="text-center xl:text-left order-2 xl:order-none">
             <span className="text-xl">FullStack Developer</span>
-            <h1 className="h1 mb-6">
+            <h1 className="h1 mb-6 xl:mb-2">
               Hello I'm <br />
               <span className="text-accent">ZorawaR SingH</span>
             </h1>
