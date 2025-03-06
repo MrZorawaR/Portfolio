@@ -7,28 +7,28 @@ const services = [
     title: "Web Development",
     description:
       "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae cupiditate exercitationem asperiores aliquam. Possimus, quas.",
-    href: "/work",
+    href: "/contact",
   },
   {
     id: "02",
     title: "UI/UX Design",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae cupiditate exercitationem asperiores aliquam. Possimus, quas.",
-    href: "/work",
+    href: "/contact",
   },
   {
     id: "03",
     title: "Logo Design",
     description:
       "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae cupiditate exercitationem asperiores aliquam. Possimus, quas.",
-    href: "/work",
+    href: "/contact",
   },
   {
     id: "04",
     title: "Full Stack Development",
     description:
       "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae cupiditate exercitationem asperiores aliquam. Possimus, quas.",
-    href: "/work",
+    href: "/contact",
   },
 ];
 
