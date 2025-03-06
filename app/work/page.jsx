@@ -23,7 +23,13 @@ const projects = [
     title: "Prime Tv",
     description:
       "Prime Tv is a movie streaming web app built with React.js and Rest API, offering curated content, personalized recommendations, and seamless, secure streaming. This project enhanced my skills in creating high-performance, user-friendly platforms optimized for all devices.",
-    stack: [{ name: "React.Js" }, { name: "Rest API" }, { name: "Tailwind CSS" },{ name: "Redux Toolkit" },{ name: "JavaScript" }],
+    stack: [
+      { name: "React.Js" },
+      { name: "Rest API" },
+      { name: "Tailwind CSS" },
+      { name: "Redux Toolkit" },
+      { name: "JavaScript" },
+    ],
     image: "/assets/work/prime-tv.png",
     live: "https://prime-tv-two.vercel.app/",
     github: "https://github.com/sahilmor/Prime.tv",
@@ -95,45 +101,49 @@ const Work = () => {
           <div className="w-full h-full xl:w-[50%] xl:h-[46 0px] flex flex-col xl:justify-between order-2 xl:order-none">
             <div className="flex flex-col gap-[30px] h-[50%]">
               <div className="flex justify-between items-center gap-[30px]">
-              <div className="text-8xl leading-none font-extrabold text-transparent text-outline">
-                {project.num}
-              </div>
-              <div className="flex gap-4 mt-4 items-center">
-                <Link href={project.live} target="_blank">
-                  <TooltipProvider delayDuration={100}>
-                    <Tooltip>
-                      <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 group flex items-center justify-center">
-                        <BsArrowUpRight className="text-white text-3xl group-hover:text-accent hover:rotate-[45deg] transition-all duration-500" />
-                      </TooltipTrigger>
-                      <TooltipContent>Live</TooltipContent>
-                    </Tooltip>
-                  </TooltipProvider>
-                </Link>
-                <Link href={project.github} target="_blank">
-                  <TooltipProvider delayDuration={100}>
-                    <Tooltip>
-                      <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 group flex items-center justify-center">
-                        <BsGithub className="text-white text-3xl group-hover:text-accent" />
-                      </TooltipTrigger>
-                      <TooltipContent>Github repository</TooltipContent>
-                    </Tooltip>
-                  </TooltipProvider>
-                </Link>
-              </div>
+                <div className="text-8xl leading-none font-extrabold text-transparent text-outline">
+                  {project.num}
+                </div>
+                <div className="flex gap-4 mt-4 items-center">
+                  <Link href={project.live} target="_blank">
+                    <TooltipProvider delayDuration={100}>
+                      <Tooltip>
+                        <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 group flex items-center justify-center hover:rotate-[45deg] transition-all duration-500">
+                          <BsArrowUpRight className="text-white text-3xl group-hover:text-accent " />
+                        </TooltipTrigger>
+                        <TooltipContent>Live</TooltipContent>
+                      </Tooltip>
+                    </TooltipProvider>
+                  </Link>
+                  <Link href={project.github} target="_blank">
+                    <TooltipProvider delayDuration={100}>
+                      <Tooltip>
+                        <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 group flex items-center justify-center">
+                          <BsGithub className="text-white text-3xl group-hover:text-accent" />
+                        </TooltipTrigger>
+                        <TooltipContent>Github repository</TooltipContent>
+                      </Tooltip>
+                    </TooltipProvider>
+                  </Link>
+                </div>
               </div>
               <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500 capitalize">
                 {project.category} project
               </h2>
-              <p className="text-white/60 text-justify">{project.description}</p>
+              <p className="text-white/60 text-justify">
+                {project.description}
+              </p>
               <ul className="flex gap-4 flex-wrap w-full">
                 {project.stack.map((stack, index) => (
-                  <li className="lg:text-xl text-accent text-sm border p-2 rounded-full" key={index}>
+                  <li
+                    className="lg:text-xl text-accent text-sm border p-2 rounded-full"
+                    key={index}
+                  >
                     {stack.name}
                   </li>
                 ))}
               </ul>
               <div className="border border-white"></div>
-              
             </div>
           </div>
           <div className="w-full xl:w-[50%]">
@@ -152,10 +162,8 @@ const Work = () => {
               {projects.map((project, index) => (
                 <SwiperSlide key={index} className="w-full">
                   <div className="xl:h-[460px] h-[200px] relative group flex justify-center items-center bg-pink-50/20 rounded-xl">
-                    {/* Overlay */}
                     <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-all rounded-xl"></div>
 
-                    {/* Image */}
                     <div className="relative w-full h-full rounded-xl">
                       <Image
                         src={project.image}
