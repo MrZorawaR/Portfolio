@@ -2,6 +2,7 @@
 
 import {
   Sheet,
+  SheetClose,
   SheetContent,
   SheetTitle,
   SheetTrigger,
@@ -53,9 +54,10 @@ const MobileNav = () => {
               href={link.path}
               key={index}
               className={`${
-                pathname === link.path && "text-accent border-b-2 border-accent"} capitalize font-xl hover:text-accent transition-all`}
+                pathname === link.path && "text-accent border-b-2 border-accent"
+              } capitalize font-xl hover:text-accent transition-all`}
             >
-              {link.name}
+              <SheetClose>{link.name}</SheetClose>
             </Link>
           ))}
         </nav>

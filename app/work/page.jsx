@@ -98,7 +98,7 @@ const Work = () => {
     >
       <div className="container mx-auto">
         <div className="flex flex-col xl:flex-row xl:gap-[30px]">
-          <div className="w-full h-full xl:w-[50%] xl:h-[46 0px] flex flex-col xl:justify-between order-2 xl:order-none">
+          <div className="w-full h-full xl:w-[50%] xl:h-[460px] flex flex-col xl:justify-between order-2 xl:order-none">
             <div className="flex flex-col gap-[30px] h-[50%]">
               <div className="flex justify-between items-center gap-[30px]">
                 <div className="text-8xl leading-none font-extrabold text-transparent text-outline">
@@ -143,7 +143,7 @@ const Work = () => {
                   </li>
                 ))}
               </ul>
-              <div className="border border-white"></div>
+              <div className="border border-white w-full"></div>
             </div>
           </div>
           <div className="w-full xl:w-[50%]">
