@@ -6,31 +6,32 @@ const services = [
     id: "01",
     title: "Web Development",
     description:
-      "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae cupiditate exercitationem asperiores aliquam. Possimus, quas.",
+      "Building responsive, high-performance websites using the latest technologies to deliver seamless user experiences across all devices.",
     href: "/contact",
   },
   {
     id: "02",
     title: "UI/UX Design",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae cupiditate exercitationem asperiores aliquam. Possimus, quas.",
+      "Designing intuitive and visually appealing interfaces that prioritize user engagement and elevate brand identity.",
     href: "/contact",
   },
   {
     id: "03",
     title: "Logo Design",
     description:
-      "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae cupiditate exercitationem asperiores aliquam. Possimus, quas.",
+    "Crafting unique, memorable, and impactful logos that effectively represent your brand’s vision and make a lasting impression.",
     href: "/contact",
   },
   {
     id: "04",
     title: "Full Stack Development",
     description:
-      "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae cupiditate exercitationem asperiores aliquam. Possimus, quas.",
+      "Developing robust, end-to-end web applications with scalable backend solutions and dynamic, interactive frontends.",
     href: "/contact",
   },
 ];
+
 
 import { motion } from "framer-motion";
 import Link from "next/link";

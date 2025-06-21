@@ -13,17 +13,21 @@ import {
   SiFigma,
   SiCanva,
   SiBootstrap,
+  SiFirebase,
+  SiPostman,
+  SiGithub,
+  SiNetlify,
 } from "react-icons/si";
 import { TbBrandCpp } from "react-icons/tb";
 
 const about = {
   title: "About Me",
   description:
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, perferendis?",
+    "I’m a final-year B.Tech student at Geeta University, passionate about building impactful web solutions. I have proven my skills by winning a national-level hackathon and contributing as a Web Developer Intern at Geeta Technical Hub. Previously, I worked as a Full Stack Web Developer Intern at Naai India, where I honed my expertise in the MERN stack, Next.js, and Tailwind CSS. I thrive in dynamic environments, love solving real-world problems through code, and constantly seek to expand my technical horizons. With a strong foundation in modern web technologies, I aim to innovate and deliver user-centric applications.",
   info: [
     {
       fieldName: "Name",
-      fieldValue: "Zorawar Singh",
+      fieldValue: "Nitish Chaudhary",
     },
     {
       fieldName: "Phone",
@@ -90,12 +94,26 @@ const achievements = {
       link: "https://www.linkedin.com/posts/nitish315_hackathon-codeahaunt-lpu-activity-7302348539353780224-IHHm/",
     },
     {
+      title:"Organised HackForge'25,GU Internal Hackathon",
+      location: "Geeta University, Panipat, Haryana",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, perferendis?",
+      link:"https://www.linkedin.com/posts/shravyatrey315_hackforge25-corecommittee-gratitudepost-activity-7324753837557219328-zQb3?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEQxf3ABiMkSQm8u0oLd4Ly0KcqbEmRmESg",
+    },
+    {
       title:
         "Finalists in AIU-North Zone Student Research Convention – Anveshan 2024",
       location: " Galgotias University, Greater Noida, Uttar Pradesh",
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, perferendis?",
       link: "https://www.linkedin.com/posts/nitish315_anveshan2024-aiu-krishidoot-activity-7270691542292393984-7MJl/",
+    },
+    {
+      title: "Participant in HackaHound 3.0",
+      location: "SRM University, Modinagar, Ghaziabad, Uttar Pradesh",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, perferendis?",
+      link: "https://www.linkedin.com/posts/nitish315_hackhound3-srmuniversity-hackathon-activity-7308002898565599232-3WLc?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEQxf3ABiMkSQm8u0oLd4Ly0KcqbEmRmESg",
     },
     {
       title: "Participant in Smart India Hackathon(SIH) 2024",
@@ -134,7 +152,7 @@ const education = {
     },
     {
       institution: "CBSE",
-      degree: "12th - Non-Medical(PCM)",
+      degree: "12th Non-Medical(PCM)",
       duration: "2021 - 2022",
     },
     {
@@ -218,6 +236,18 @@ const skills = {
       icon: <SiBootstrap />,
       name: "Bootstrap",
     },
+    {
+      icon: <SiPostman />,
+      name: "Postman",
+    },
+    {
+      icon: <SiGithub />,
+      name: "Github",
+    },
+    {
+      icon: <SiNetlify />,
+      name: "Netlify",
+    }
   ],
 };
 
@@ -244,10 +274,13 @@ const Resume = () => {
     >
       <div className="container mx-auto">
         <Tabs
-          defaultValue="experience"
+          defaultValue="about"
           className="flex flex-col xl:flex-row gap-[60px]"
         >
           <TabsList className="flex flex-col gap-6 max-w-[380px] w-full mx-auto xl:mx-0">
+            <TabsTrigger value="about" className="rounded-xl">
+              About me
+            </TabsTrigger>
             <TabsTrigger value="experience" className="rounded-xl">
               Experience
             </TabsTrigger>
@@ -257,9 +290,7 @@ const Resume = () => {
             <TabsTrigger value="skills" className="rounded-xl">
               Skills
             </TabsTrigger>
-            <TabsTrigger value="about" className="rounded-xl">
-              About me
-            </TabsTrigger>
+            
             <TabsTrigger value="achievements" className="rounded-xl">
               Achievements
             </TabsTrigger>
@@ -268,9 +299,9 @@ const Resume = () => {
             <TabsContent value="experience" className="w-full">
               <div className="flex flex-col gap-[30px] text-center xl:text-left">
                 <h3 className="text-4xl font-bold">{experience.title}</h3>
-                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
+                {/* <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
                   {experience.description}
-                </p>
+                </p> */}
                 <ScrollArea className="lg:h-[26rem] h-[35rem]">
                   <ul className="grid grid-cols-1 gap-[30px] lg:grid-cols-2">
                     {experience.items.map((item, index) => {
@@ -297,9 +328,9 @@ const Resume = () => {
             <TabsContent value="education" className="w-full">
               <div className="flex flex-col gap-[30px] text-center xl:text-left">
                 <h3 className="text-4xl font-bold">{education.title}</h3>
-                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
+                {/* <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
                   {education.description}
-                </p>
+                </p> */}
                 <ScrollArea className="lg:h-[26rem] h-[35rem]">
                   <ul className="grid grid-cols-1 gap-[30px] lg:grid-cols-2">
                     {education.items.map((item, index) => {
@@ -327,9 +358,9 @@ const Resume = () => {
               <div className="flex flex-col gap-[30px]">
                 <div className="flex flex-col gap-[30px] text-center xl:text-left">
                   <h3 className="text-4xl font-bold">{skills.title}</h3>
-                  <p className="max-w-[600px] text-white/60 mx-auto xl:mx-8">
+                  {/* <p className="max-w-[600px] text-white/60 mx-auto xl:mx-8">
                     {skills.description}
-                  </p>
+                  </p> */}
                 </div>
                 <ScrollArea className="lg:h-[26rem] h-[35rem]">
                   <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
@@ -355,15 +386,15 @@ const Resume = () => {
                 </ScrollArea>
               </div>
             </TabsContent>
-            <TabsContent value="about" className="w-full h-full">
+            <TabsContent value="about" className="w-full h-full overflow-hidden">
               <div className="flex flex-col gap-[30px]">
               <div className="flex flex-col gap-[30px] text-center xl:text-left">
                   <h3 className="text-4xl font-bold">{about.title}</h3>
-                  <p className="max-w-[600px] text-white/60 mx-auto xl:mx-8">
+                  <p className="text-white/60 mx-auto  text-justify">
                     {about.description}
                   </p>
                 </div>
-                <ScrollArea className="lg:h-[26rem] h-[35rem]">
+                <ScrollArea className="">
                 <ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-6 max-w-[620px] mx-auto xl:mx-0">
                   {about.info.map((item, index) => (
                     <li
@@ -383,9 +414,9 @@ const Resume = () => {
               <div className="flex flex-col gap-[30px]">
               <div className="flex flex-col gap-[30px] text-center xl:text-left">
                   <h3 className="text-4xl font-bold">{achievements.title}</h3>
-                  <p className="max-w-[600px] text-white/60 mx-auto xl:mx-8">
+                  {/* <p className="max-w-[600px] text-white/60 mx-auto xl:mx-8">
                     {achievements.description}
-                  </p>
+                  </p> */}
                 </div>
                 <ScrollArea className="lg:h-[26rem] h-[35rem]">
                   <ul className="grid grid-cols-1 gap-[30px]">
@@ -401,9 +432,9 @@ const Resume = () => {
                           <span className="w-[6px] h-[6px] bg-accent rounded-full"></span>
                           <p className="text-white/60">{item.location}</p>
                         </div>
-                        <p className="text-white/60 text-sm text-center lg:text-left">
+                        {/* <p className="text-white/60 text-sm text-center lg:text-left">
                           {item.description}
-                        </p>
+                        </p> */}
                         <a
                           href={item.link}
                           target="_blank"

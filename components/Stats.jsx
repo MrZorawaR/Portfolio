@@ -11,15 +11,15 @@ const stats = [
     text: "Projects Completed",
   },
   {
-    num: 17,
+    num: 20,
     text: "Technologies Used",
   },
   {
-    num: 100,
+    num: 150,
     text: "Code commits",
   },
   {
-    num: 110,
+    num: 120,
     text: "LeetCode Problems Solved",
   },
 ];
@@ -39,7 +39,7 @@ const Stats = () => {
                 duration={5}
                 delay={2}
                 className="text-4xl font-extrabold xl:text-6xl"
-              />
+              /><span className="text-xl font-extrabold xl:text-2xl">+</span>
               <p className={`${stat.text.length<15 ? "max-w-[100px]": "max-w-[160px]"} loading-snug text-white/80`}>
                 {stat.text}
               </p>
