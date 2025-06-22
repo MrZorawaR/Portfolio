@@ -22,10 +22,13 @@ export default function Home() {
               <Button
                 variant="outline"
                 size="lg"
-                className="uppercase flex items-center gap-2"
+                className=""
               >
+                  <a href="/assets/resume/Nitish_CV_Latest.pdf" download className="uppercase flex items-center gap-2">
+
                 <span>Download CV</span>
                 <FiDownload className="text-xl" />
+                  </a>
               </Button>
               <div className="mb-8 xl:mb-0">
                 <Social />
