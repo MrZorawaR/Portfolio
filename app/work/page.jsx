@@ -36,47 +36,58 @@ const projects = [
   },
   {
     num: "02",
-    category: "frontend",
-    title: "project 1",
+    category: "Full Stack",
+    title: "AI Fashion Stylist",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae cupiditate exercitationem asperiores aliquam. Possimus, quas.",
-    stack: [{ name: "react" }, { name: "next" }, { name: "tailwind" }],
-    image: "/assets/work/thumb1.png",
-    live: "",
-    github: "",
+      "AI Fashion Stylist uses TensorFlow pose detection, MediaPipe, and generative AI to analyze your body shape and instantly suggest personalized outfit recommendations for every occasion. It makes fashion choices easy and helps you shop confidently with styles that truly fit you.",
+    stack: [{ name: "Tensorflow Models" }, { name: "React.Js" },{name:"Vite"}, { name: "Tailwind CSS" },{name:"Generative AI"}, {name:"Mediapipe"}],
+    image: "/assets/work/ai-fashion.png",
+    live: "https://ai-fashion-stylist-ten.vercel.app/",
+    github: "https://github.com/MrZorawaR/AI-Fashion-Stylist",
   },
   {
     num: "03",
-    category: "frontend",
-    title: "project 1",
+    category: "Full Stack",
+    title: "Prodec",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae cupiditate exercitationem asperiores aliquam. Possimus, quas.",
-    stack: [{ name: "react" }, { name: "next" }, { name: "tailwind" }],
-    image: "/assets/work/thumb1.png",
+      "Prodec is an innovative addon for Netflix and YouTube that lets users pause any video and instantly capture the frame. Using Flask, Next.js, and generative AI, it analyzes the paused scene and recommends related products, making it easy to discover and shop for items seen in videos.",
+    stack: [{ name: "Next.Js" }, { name: "Flask" }, { name: "Tailwind CSS" }, { name: "Python" },{name:"TypeScript"}],
+    image: "/assets/work/prodec.png",
     live: "",
     github: "",
   },
   {
     num: "04",
-    category: "frontend",
-    title: "project 1",
+    category: "Full Stack",
+    title: "Carrer Flow AI",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae cupiditate exercitationem asperiores aliquam. Possimus, quas.",
-    stack: [{ name: "react" }, { name: "next" }, { name: "tailwind" }],
-    image: "/assets/work/thumb1.png",
-    live: "",
-    github: "",
+      "Career Flow AI is a smart platform that uses generative AI to create a personalized career roadmap based on your skills and goals. It suggests the best courses, guides you step by step, and tracks your progress. Built with Next.js, Node.js, Express, MongoDB, Jotai, Tailwind CSS, and TypeScript.",
+    stack: [{ name: "Express.Js" }, { name: "Next.Js" }, { name: "Tailwind CSS" },{name:"Generative AI"},{name:"Node.Js"},{name:"MongoDB"},{name:"Jotai"}],
+    image: "/assets/work/carrerflow-ai.png",
+    live: "https://carrer-flow-ai.vercel.app/",
+    github: "https://github.com/sahilmor/CarrerFlowAI",
   },
   {
     num: "05",
-    category: "frontend",
-    title: "project 1",
+    category: "Frontend",
+    title: "Quiz Master",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae cupiditate exercitationem asperiores aliquam. Possimus, quas.",
-    stack: [{ name: "react" }, { name: "next" }, { name: "tailwind" }],
-    image: "/assets/work/thumb1.png",
-    live: "",
-    github: "",
+      "Quiz Master is a fun and interactive web app for taking quizzes. It provides an engaging user experience with smooth navigation and progress tracking. Built with Next.js, Recoil for state management, TypeScript for type safety, and styled using Tailwind CSS, Quiz Master makes learning enjoyable and easy to use for everyone.",
+    stack: [{ name: "Next.js" },{ name: "Recoil" },{ name: "TypeScript" },{ name: "Tailwind CSS" },{ name: "Framer Motion" }],
+    image: "/assets/work/quizmaster.png",
+    live: "https://quiz-app-psi-navy.vercel.app/",
+    github: "https://github.com/MrZorawaR/quiz-app",
+  },
+  {
+    num: "06",
+    category: "Frontend",
+    title: "Fasal Guru",
+    description:
+      "FasalGuru is a multilingual AI chatbot fine-tuned for farmers. Ask questions in any language and get answers spoken back in your language using Gemini AI, Web Speech API, ResponsiveVoice, React, Tailwind, and Framer. It makes farming advice simple and accessible to everyone.",
+    stack: [{name:"React"},{name:"Tailwind CSS"},{name:"Framer Motion"},{name:"Web Speech API"},{name:"ResponsiveVoice"},{name:"Gemini API"}],
+    image: "/assets/work/fasalguru.png",
+    live: "https://fasal-guru.vercel.app/",
+    github: "https://github.com/MrZorawaR/fasalguru",
   },
 ];
 const Work = () => {
@@ -105,6 +116,7 @@ const Work = () => {
                   {project.num}
                 </div>
                 <div className="flex gap-4 mt-4 items-center">
+                  {project.live && (  
                   <Link href={project.live} target="_blank">
                     <TooltipProvider delayDuration={100}>
                       <Tooltip>
@@ -115,6 +127,8 @@ const Work = () => {
                       </Tooltip>
                     </TooltipProvider>
                   </Link>
+                  )}
+                  {project.github && (  
                   <Link href={project.github} target="_blank">
                     <TooltipProvider delayDuration={100}>
                       <Tooltip>
@@ -125,10 +139,11 @@ const Work = () => {
                       </Tooltip>
                     </TooltipProvider>
                   </Link>
+                  )}
                 </div>
               </div>
               <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500 capitalize">
-                {project.category} project
+                {project.title}
               </h2>
               <p className="text-white/60 text-justify">
                 {project.description}
@@ -177,7 +192,7 @@ const Work = () => {
               ))}
               <WorkSliderBtns
                 containerStyles="flex gap-2 absolute right-0 bottom-[calc(50%_-_22px)]  z-20 w-full justify-between"
-                btnStyles="bg-transparent xl:hover:bg-accent-hover text-white rounded-full text-[34px] w-[44px] h-[44px] flex justify-center items-center transition-all"
+                btnStyles="bg-transparent xl:hover:bg-accent-hover xl:hover:text-white text-accent rounded-full text-[34px] w-[44px] h-[44px] flex justify-center items-center transition-all"
                 iconStyles="w-5 h-5"
                 swiper={swiperInstance}
               />
